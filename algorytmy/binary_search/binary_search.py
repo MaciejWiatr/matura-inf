@@ -18,3 +18,21 @@ def binary_search(list, item):
 
 
 print(binary_search(items, 8))
+
+
+def recursive_binary_search(arr, low, high, item):
+    if high >= low:
+        mid = low + (high - 1) // 2
+        guess = arr[mid]
+        if guess == item:
+            return mid
+        if guess > item:
+            return recursive_binary_search(arr, low, mid-1, item)
+        else:
+            return recursive_binary_search(arr, mid+1, high, item)
+    else:
+        return -1
+
+
+arr = [1, 2, 3, 4, 5]
+print(recursive_binary_search(arr, 0, len(arr)-1, 4))
