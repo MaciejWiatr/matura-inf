@@ -1,7 +1,9 @@
 .vscode
 bin
 obj
-
+.obsidian/
+.trash/
+.DS_Store
 ### DotnetCore ###
 # .NET Core build folders
 bin/
